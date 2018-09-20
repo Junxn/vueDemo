@@ -1,0 +1,17 @@
+{
+  "name": "mint-range",
+  "description": "",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "author": "long.zhang@ele.me",
+  "homepage": "https://github.com/ElemeFE/mint-ui",
+  "license": "MIT",
+  "script":{
+  	"dev":"webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+  	"star":"npm run dev",
+  	"build":"node build/build.js"
+  },
+  "repository": "https://github.com/ElemeFE/mint-ui/tree/master/components/mint-range",
+  "dependencies": {
+  }
+}

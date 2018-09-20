@@ -1,0 +1,31 @@
+modul.exports = {
+	
+	//入口
+	entry:{
+		main:'./src/main.js'
+	},
+	output:{
+		path:path.join(__dirname,'dist'),
+		filname:'build.js'
+	},
+	module:{
+		loaders:[
+			{
+				test:/\.css$/,
+				loader:'style-loader!css-loader!autoprefixer-loader'
+			},
+			{
+				test:/\.less$/,
+				loader:'style-loader!css-loader!autoprefixer-loader!less-loader'
+			},
+			{
+				test:/\.(jpg|png|svg|ttf|woff|woff2|gif)$/,
+				loader:'url-loader',
+				options:{
+					limit:4096,
+					name:'[name]'
+				}
+			},
+		]
+	}
+}
